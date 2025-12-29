@@ -1,0 +1,63 @@
+This is the code of recipe_details.php. I want to display actual cook time which stored in cooking_time column
+
+For the Cake
+    2 ½ cups (310 g) all-purpose flour
+    2 tbsp unsweetened cocoa powder (adds mild chocolate flavor without overpowering)
+    1 tsp baking soda
+    ½ tsp salt
+    1 ½ cups (300 g) granulated sugar
+    1 ½ cups (360 ml) vegetable oil (neutral, like sunflower or canola, keeps the cake moist)
+    2 large eggs
+    1 cup (240 ml) buttermilk, room temperature (acidic base helps give the cake its velvety texture)
+    2 tbsp red food coloring (liquid or gel) (gel gives a richer red without altering texture)
+    1 tsp vanilla extract
+    1 tsp distilled white vinegar (reacts with baking soda for extra lift)
+
+For the Cream Cheese Frosting
+    8 oz (225 g) cream cheese, softened
+    ½ cup (115 g) unsalted butter, softened
+    4 cups (480 g) powdered sugar, sifted (sifting prevents lumps in the frosting)
+    2 tsp vanilla extract
+
+Instructions
+
+1. Preheat & Prepare Pans
+    Preheat oven to 350°F (175°C).
+    Grease and flour two 9-inch (23 cm) round cake pans, or line with parchment paper.
+    (Tip: Parchment ensures cakes release easily and stay intact when layered.)
+
+2. Mix Dry Ingredients
+    In a medium bowl, sift together flour, cocoa powder, baking soda, and salt.
+    (Tip: Sifting aerates the flour, leading to a lighter crumb.)
+
+3. Beat Sugar & Oil
+    In a large mixing bowl, whisk sugar and oil until well combined.
+    Add eggs one at a time, beating after each addition until smooth and fluffy.
+    (Comment: Oil gives moisture; eggs provide structure — both balance to achieve velvety texture.)
+
+4. Add Flavor Base
+    Stir in vanilla extract, red food coloring, and vinegar. Mix until evenly distributed.
+    (Tip: Vinegar is key for authentic red velvet—it enhances both color and rise.)
+
+5. Combine Wet & Dry with Buttermilk
+    Alternate adding the dry flour mixture and buttermilk into the wet mixture, beginning and ending with flour.
+    Gently fold with a spatula or low-speed mixer until just combined.
+    (Important: Do not overmix—this can make the cake dense. Stop as soon as no streaks of flour remain.)
+
+6. Bake
+    Divide batter evenly into prepared pans and smooth the tops.
+    Bake for 28–32 minutes, or until a toothpick inserted in the center comes out clean.
+    Let cakes cool in pans for 10 minutes before transferring to wire racks.
+    (Tip: Cooling too quickly may cause cracks; be patient and let them release naturally.)
+
+7. Make Cream Cheese Frosting
+    In a large bowl, beat softened cream cheese and butter until creamy.
+    Gradually add sifted powdered sugar, 1 cup at a time, until fully incorporated.
+    Beat in vanilla extract until frosting is light and fluffy.
+    (Tip: Chill frosting for 15 minutes before spreading to make it easier to handle.)
+
+8. Assemble the Cake
+    Place one cake layer on a serving plate or cake board. Spread an even layer of frosting on top.
+    Place the second cake layer, then cover the top and sides with frosting.
+    Garnish with cake crumbs, red sprinkles, or white chocolate shavings.
+    (Comment: Using crumbs from trimmed cake edges is a traditional Southern garnish that signals authenticity.)

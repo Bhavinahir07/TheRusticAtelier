@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+a {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    position: relative;
+    /* Crucial for centering the nav */
+    z-index: 20;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: orange;
+    border-bottom-color: orange;
+}
+
+
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    /* background-color: #333; */
+    background-color: #000;
+    color: white;
+    transform: scale(1.03);
+}
+
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* ✨ FIX: Added the hamburger 'X' transformation rules back as requested */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* --- ALL YOUR ORIGINAL STYLES RESTORED BELOW --- */
+
+.headerSubNav>h1 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.toggle-more {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.food-category {
+    display: none;
+}
+
+#latest {
+    display: grid;
+}
+
+.search-container {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.search:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    border-radius: 6px;
+}
+
+.no-results-message {
+    display: none;
+    height: 330px;
+    position: relative;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    color: #f44336;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+}
+
+.no-results-message span {
+    position: static;
+}
+
+.sub-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.category-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.category-list li {
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* Add this to all items for a consistent shape */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* This is the new rule for the active item */
+.category-list li.active {
+    background-color: #fcf5e1;
+    /* A light blue background */
+    /* color: #0d6efd; */
+    color: #ffc107;
+    /* A vivid blue for the text */
+    font-weight: 500;
+    /* Make the font slightly bolder */
+}
+
+.sub-nav {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+
+.sub-nav ul {
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-nav ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.sub-nav ul li.hidden {
+    display: none;
+}
+
+section {
+    padding: 8px;
+    background-color: white;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+section ul li {
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section ul li:hover {
+    color: orange;
+}
+
+.hideLogin {
+    display: none;
+}
+
+.box-container {
+    margin-top: 10px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.food-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 270px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 0;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.food-item:hover {
+    transform: scale(1.04);
+}
+
+.food-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.food-item:hover img {
+    transform: scale(1.1);
+}
+
+.food-item .p,
+.food-item .description,
+.food-item .showRecipe {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.food-item .showRecipe {
+    padding-bottom: 20px;
+}
+
+.food-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.food-item .p {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-bottom: 8px;
+    padding-top: 20px;
+}
+
+.food-item .description p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 15px;
+    flex-grow: 1;
+}
+
+/* --- Styling for the recipe owner --- */
+#recipe-owner {
+    font-size: 1rem;
+    font-style: italic;   
+    color: #202020;
+    /* color: orange; */
+    margin-bottom: 10px;    
+}
+
+.showRecipe {
+    margin-top: auto;
+}
+
+.showRecipe a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.showRecipe a:hover {
+    background-color: #333;
+    transform: scale(1.06);
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        position: relative;
+        z-index: 100;
+    }
+
+    header nav {
+        position: static;
+        transform: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 75%;
+        background-color: #fff;
+        padding-top: 60px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: left 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .auth-buttons a[href="signup.php"] {
+        display: none;
+    }
+
+    .hideLogin {
+        display: block;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        /* z-index: 999; */
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    .menu-close {
+        display: none !important;
+    }
+
+    .sub-nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .sub-nav ul li.hidden {
+        display: block;
+    }
+
+    .toggle-more {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff4500;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social .social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #fff;
+}

@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-group button {
+    background-color: black;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-group button:hover {
+    background-color: rgb(3, 3, 3);
+    transform: scale(1.06);
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+#edit .form-group input[type="text"],
+#edit .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #000; /* Ensures black text */
+    caret-color: #000; /* Ensures black text cursor */
+    cursor: text; /* Ensures proper cursor type */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    padding: 10px 16px;
+    /* background-color: #28a745; */
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"].btn-danger {
+    background-color: #dd0909ff;
+    font-size: 1rem;
+}
+
+.success-msg {
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.info-group {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.label {
+    font-weight: bold;
+    min-width: 140px;
+    display: inline-block;
+    color: #222;
+}
+
+.value {
+    color: #444;
+    flex: 1;
+    max-width: 600px;
+}
+
+.description-group {
+    align-items: flex-start;
+}
+
+.description-text {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Style the entire edit section */
+#edit.section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Style for the card title */
+#edit .card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Common style for all form groups */
+#edit .form-group {
+    margin-bottom: 18px;
+}
+
+/* Labels styling */
+#edit .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Input fields and textarea */
+#edit .form-group input[type="text"],
+#edit .form-group textarea,
+#edit .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+
+    /* ✅ Fix repeated here for scoped styles */
+    cursor: text;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+
+#edit .form-group input[type="text"]:focus,
+#edit .form-group textarea:focus,
+#edit .form-group select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Dropdown specifically */
+#edit select {
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: center;
+    cursor: pointer;
+}
+
+/* Submit button */
+#edit input[type="submit"] {
+    background-color: #060606ff;
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#edit input[type="submit"]:hover {
+    background-color: #000000ff;
+}
+
+/* Apply larger size only to the content textarea */
+form textarea[name="content"] {
+    cursor: text;
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    /* ✅ Fix repeated here as well */
+    position: relative;
+    z-index: 1;
+}

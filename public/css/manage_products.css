@@ -1,0 +1,133 @@
+/* manage_products.css */
+
+/* Container for dashboard + add product buttons */
+.add-buttons {
+    display: flex;
+    justify-content: space-between; /* Dashboard left, Add Product right */
+    align-items: center;
+    margin: 20px 10px;
+    flex-wrap: wrap; /* prevent overflow on small screens */
+    gap: 10px;
+}
+
+/* Optional: ensure buttons are same height/line */
+.add-buttons .btn {
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Dashboard button used in manage_products.php page */
+.dashboard {
+    display: flex;
+    min-width: 100px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for Add Product button */
+.btn-add:hover {
+    background-color: #000;
+}
+
+/* Product card action buttons layout */
+.product-card .auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* ===== Tablets (up to 1024px) ===== */
+@media (max-width: 1024px) {
+    .add-buttons {
+        margin: 15px;
+    }
+
+    /* Dashboard button alignment fix for tablets */
+    .dashboard {
+        min-width: 120px;
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+}
+
+/* ===== Mobile (up to 768px) ===== */
+@media (max-width: 768px) {
+    .add-buttons {
+        flex-direction: column;   /* stack Dashboard & Add Product vertically */
+        align-items: stretch;
+        /* width: 50%; */
+    }
+
+    .add-buttons .btn {
+        width: 100%;              /* full width buttons */
+        text-align: center;
+    }
+
+    /* Dashboard full width on mobile */
+    .dashboard {
+        width: 100%;
+        justify-content: center;  /* center text inside */
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* single column for products */
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card img {
+        max-height: 150px;
+        object-fit: cover;
+    }
+
+    .product-card .auth-buttons {
+        flex-direction: column;   /* stack Edit/Delete buttons vertically */
+        gap: 5px;
+    }
+}
+
+/* ===== Very Small Devices (up to 480px) ===== */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+    }
+
+    .add-buttons {
+        gap: 8px;
+    }
+
+    /* Dashboard button tweak for very small screens */
+    .dashboard {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .btn-add {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}

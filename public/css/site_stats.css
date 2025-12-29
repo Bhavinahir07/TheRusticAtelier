@@ -1,0 +1,122 @@
+.stats-container {
+    /* max-width: 800px; */
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #fff;
+    /* background: #f3f3f3ff; */
+    padding: 20px;
+    /* margin: 26px;
+            height: 150px;
+            width: 250px; */
+    /* border: none; */
+    border-radius: 10px;
+    text-align: center;
+    /* box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.stat-btn {
+    border: none;
+    background: #fff;
+    color: inherit;
+}
+
+.stat-card:hover {
+    background: #f7f7f7ff;
+    transform: scale(1.05);
+}
+
+.stat-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+.btn-dashboard {
+    margin-left: 370px;
+}
+
+/* .btn-dashboard {
+                max-width: 200px;
+                margin-left: 50px;
+            } */
+
+/* ✅ Responsive Adjustments for All Devices */
+@media (max-width: 1024px) {
+    .stats-container {
+        padding: 0 20px 0 20px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 0 20px 0 20px;
+    }
+
+    .stat-title {
+        font-size: 1.1em;
+    }
+
+    .stat-value {
+        font-size: 1.8em;
+    }
+
+    .btn-dashboard {
+        /* font-size: 0.95em; */
+        /* padding: 9px 16px; */
+        max-width: 200px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-title {
+        font-size: 1em;
+    }
+
+    .stat-value {
+        font-size: 1.6em;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 8px auto;
+    }
+}

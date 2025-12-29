@@ -1,0 +1,122 @@
+/* 🛒 Amazon-style product list view */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space between cards */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;   /* Image left, details right */
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  max-width: 100%; /* prevent overflow */
+}
+
+/* left image */
+.product-card img {
+  width: 160px;      
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+/* right content container */
+.product-details {
+  display: flex;
+  flex-direction: column; /* stack everything vertically */
+  justify-content: flex-start;
+  flex: 1; /* take remaining width */
+}
+
+.product-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.product-details p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-details .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin: 10px 0;
+}
+
+.product-details .cart-btn {
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  align-self: flex-start; /* button stays left aligned */
+}
+
+/* 📱 Mobile (max 768px) */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-card img {
+    margin: 0 0 12px 0;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .product-details {
+    align-items: center; /* center details on mobile */
+  }
+
+  .product-details .cart-btn {
+    width: 100%; /* full-width button on mobile */
+    align-self: center;
+  }
+}
+
+/* 📱 Tablet (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-card {
+    /* max-width: 500px;   a bit smaller than desktop */
+    width: 600px;
+    margin: 0 auto 16px auto; /* center it with spacing below */
+    padding: 12px;    /* slightly reduce padding */
+  }
+
+  .product-card img {
+    width: 200px;
+    height: 200px;
+    position: inherit;
+  }
+
+  .product-details h3 {
+    font-size: 1.1rem; /* slightly smaller text */
+  }
+
+  .product-details .price {
+    font-size: 15px;
+  }
+
+  .product-details .cart-btn {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}
+

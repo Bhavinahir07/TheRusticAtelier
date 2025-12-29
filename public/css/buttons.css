@@ -1,0 +1,26 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    /* pushes left + right */
+    align-items: center;
+    /* keeps them vertically aligned */
+    margin: 20px 0;
+}
+
+.back-link {
+    /* text-align: left; */
+    text-decoration: none;
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* .back-link:hover { background:#fafafa; border-color:#eee; } */
+.back-link:hover {
+    background: black;
+    color: white;
+    transform: scale(1.06);
+}

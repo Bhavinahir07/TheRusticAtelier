@@ -1,0 +1,55 @@
+ <style>
+        .admin-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .section {
+            display: none;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .view-btn {
+            /* background: #17a2b8; */
+            background: #000;
+            color: white;
+        }
+
+        .edit-btn {
+            /* background: #28a745; */
+            background: #000;
+            color: white;
+        }
+
+        .delete-btn {
+            /* background: #dc3545; */
+            background: #000;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>

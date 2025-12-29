@@ -1,0 +1,203 @@
+:root {
+    --accent: #060606;
+}
+
+/* Column-specific alignment */
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1),
+/* ID */
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4),
+/* Cooking Time */
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5),
+/* Created At */
+.admin-table th:nth-child(6),
+.admin-table td:nth-child(6)
+
+/* Actions */
+    {
+    text-align: center;
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2),
+/* Title */
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+    /* Category */
+    text-align: left;
+}
+
+.add-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* .back-link:hover { background:#fafafa; border-color:#eee; } */
+.back-link:hover {
+    background: black;
+    color: white;
+    transform: scale(1.06);
+}
+
+/* ✅ Responsive styling improvements */
+@media (max-width: 1024px) {
+
+    .admin-table th,
+    .admin-table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .add-recipe-wrapper {
+        text-align: center;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding-bottom: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        margin-bottom: 5px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .auth-buttons {
+        font-size: 0.85rem;
+    }
+
+    .add-recipe-wrapper {
+        margin: 10px;
+    }
+
+    .btn.btn-add {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .table-section {
+        padding: 10px;
+    }
+
+    td:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+/* ✅ Card layout for very small devices */
+@media (max-width: 480px) {
+
+    .admin-table,
+    .admin-table thead,
+    .admin-table tbody,
+    .admin-table th,
+    .admin-table td,
+    .admin-table tr {
+        display: block;
+    }
+
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        background: white;
+    }
+
+    .admin-table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .admin-table td::before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .admin-table td:nth-of-type(1)::before {
+        content: "ID";
+    }
+
+    .admin-table td:nth-of-type(2)::before {
+        content: "Title";
+    }
+
+    .admin-table td:nth-of-type(3)::before {
+        content: "Category";
+    }
+
+    .admin-table td:nth-of-type(4)::before {
+        content: "Cooking Time";
+    }
+
+    .admin-table td:nth-of-type(5)::before {
+        content: "Created At";
+    }
+
+    .admin-table td:nth-of-type(6)::before {
+        content: "Actions";
+    }
+}

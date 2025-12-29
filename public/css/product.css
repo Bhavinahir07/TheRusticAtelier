@@ -1,0 +1,480 @@
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+/* Search bar */
+.search-wrapper {
+  max-width: 400px;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  /* max-width: 400px; */
+  /* padding: 10px; */
+  /* margin-bottom: 20px; */
+  /* border-radius: 4px 0 0 4px; */
+  /* box-sizing: border-box; */
+  /* outline-offset: 2px; */
+  padding: 14px 20px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.search-bar:focus {
+  /* border-color: #007bff; */
+  border-color: #ffa500;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* No results message */
+#no-results-container {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  /* padding: 40px 0;
+  color: #dc3545; */
+  color: red;
+  margin-top: 20px;
+  user-select: none;
+}
+
+/* Cart button */
+.cart-btn {
+  /* background: #ffa500; */
+  background: #000;
+  color: white;
+  /* color: #fff; */
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  /* border-radius: 30px; */
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.cart-btn:hover,
+.cart-btn:focus {
+  /* background-color: #cc8400; */
+  background-color: #000;
+  /* outline: none; */
+  outline: auto;
+}
+
+
+/* Main container */
+.container {
+  width: 90%;
+  /* margin: auto; */
+  /* padding: 20px 0; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+}
+
+/* products grid */
+.products {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  /* gap: 20px; */
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  /* border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.05); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  /* Above display code is yet to test */
+  border-radius: 16px;
+  box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, 0.2);
+  /* padding: 16px; */
+  padding: 0 0 16px 0;
+  /* ✅ remove padding around image, keep for bottom */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* new width, new height, position, right, bottom and border radius just added */
+/* .product-card img { */
+/* width: 100%; */
+/* height: 160px; */
+/* width: 272px;
+  height: 180px;
+  position: relative;
+  right: 15.4px;
+  bottom: 15px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  margin-bottom: 12px;
+} */
+
+.product-card img {
+  width: 100%;
+  /* Fill card width */
+  height: 180px;
+  /* Consistent height */
+  object-fit: cover;
+  /* No distortion, nicely cropped */
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 12px;
+  /* Space below image */
+}
+
+
+.product-card h3 {
+  /* font-size: 18px; */
+  font-size: 1.2rem;
+  margin: 10px 0 6px;
+  /* color: #333; */
+  color: #222;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  /* color: #28a745; */
+  color: #000;
+  margin: 12px 0;
+}
+
+.price {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 15px;
+}
+
+.veg {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.non-veg {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Overlay for mobile menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 10;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 75%;
+    background-color: #fff;
+    padding: 20px 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 15;
+    transition: left 0.3s ease-in-out;
+  }
+
+  nav ul.active {
+    left: 0;
+  }
+
+  nav ul li {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .auth-buttons-cart ul {
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    padding-right: 45px;
+    /* Space for button */
+  }
+}
+
+/* 📱 Mobile (max 480px) */
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+    /* Single column */
+    gap: 1rem;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-card img {
+    width: 100%;
+    /* Responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    right: 0;
+    /* Reset manual positioning */
+    bottom: 0;
+    /* Reset manual positioning */
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card .price {
+    font-size: 14px;
+  }
+}
+
+/* 📲 Tablets (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 1.2rem;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    /* Image on top, details below */
+    align-items: stretch;
+  }
+
+  .product-card img {
+    width: 100%;
+    /* Fill full card width */
+    height: auto;
+    /* Keep aspect ratio */
+    object-fit: cover;
+    /* Crop nicely if needed */
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    /* Reset earlier offsets */
+    position: static;
+    right: auto;
+    bottom: auto;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .product-card .price {
+    font-size: 15px;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #222;
+  color: white;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff6347;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-links a {
+  margin-right: 20px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social .social-icon {
+  color: #ff6347;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+  color: #fff;
+}
+
+.footer-social .facebook {
+  color: #3b5998;
+}
+
+.footer-social .twitter {
+  color: #00acee;
+}
+
+.footer-social .instagram {
+  color: #e4405f;
+}
+
+/* Container of cart button */
+.cart-top-wrapper {
+  position: absolute;
+  /* so it can float relative to page */
+  top: 136px;
+  /* adjust based on your header height */
+  right: 50px;
+  /* keep aligned right */
+  z-index: 10;
+}
+
+/* Cart button */
+.cart-btn-top {
+  display: inline-flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cart-btn-top i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.cart-btn-top:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* 📱 Mobile (max-width: 480px) → only white icon */
+@media (max-width: 480px) {
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    right: 18px;
+  }
+
+  .cart-top-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cart-btn-top {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 0;
+    /* hide text */
+    position: relative;
+    /* bottom: 20px; */
+    left: 10px;
+    bottom: 14px;
+  }
+
+  .cart-btn-top i {
+    margin: 0;
+    font-size: 22px;
+    color: #fff;
+    /* make icon white */
+  }
+
+  .cart-btn-top::after {
+    content: "";
+    /* remove text */
+  }
+}
+
+/* 💻 Tablet & Desktop (min-width: 481px) → icon + text */
+@media (min-width: 481px) {
+  /* .cart-top-wrapper{
+    top: 106px;
+    bottom: 50px;
+  } */
+
+  .cart-btn-top {
+    font-size: 16px;
+  }
+
+  .cart-btn-top i {
+    margin-right: 8px;
+    color: #fff;
+    /* keep icon white */
+  }
+}

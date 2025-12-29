@@ -1,0 +1,293 @@
+/* Admin-specific styles */
+
+.admin-welcome {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-welcome h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.admin-welcome p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* .auth-buttons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+} */
+
+/* ---- Merged from manage_recipes.php inline CSS ---- */
+
+.btn {
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-view {
+    background-color: #000000ff;
+}
+
+.btn-view:hover {
+    background-color: #000000ff;
+}
+
+.btn-edit {
+    background-color: #000000ff;
+}
+
+.btn-edit:hover {
+    background-color: #000000ff;
+}
+
+.btn-delete {
+    background-color: #000000ff;
+}
+
+.btn-delete:hover {
+    background-color: #000000ff;
+}
+
+.demo {
+    text-align: right;
+    margin: 20px 40px 0 0;
+}
+
+.add-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-add {
+    font-size: 1.2rem;
+}
+
+/* Dashboard button used in manage_products.php page */
+/* .dashboard {
+    display: flex;
+    position: relative;
+    right: 80%;
+    min-width: 100px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+} */
+
+/* Dashboard button used in manage_products.php page */
+/* .dashboard:hover {
+    transform: scale(1.06);
+} */
+
+.add-buttons .btn-add:hover {
+    background-color: rgb(15, 15, 15);
+    transform: scale(1.06);
+}
+
+.admin-user-label {
+    margin-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.box-container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-grid {
+    /* display: flex; */
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    width: 100%;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* keeps grid centered */
+}
+
+.admin-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.admin-card:hover {
+    transform: scale(1.02);
+}
+
+.admin-card .p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.admin-card .description {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.showRecipe button {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.showRecipe button:hover {
+    background-color: #333;
+}
+
+/* footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social .social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-social .social-icon:hover {
+    color: #ddd;
+} */
+
+@media (max-width: 768px) {
+    .admin-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-card {
+        width: 100%;
+    }
+
+    .auth-buttons {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+/* css code manage_recipes.php */
+.table-section {
+    padding: 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    /* max-width: 1100px; */
+    width: 100%;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.action-btn {
+    padding: 6px 10px;
+    margin: 0 4px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.action-btn.view {
+    background-color: #3498db;
+}
+
+.action-btn.edit {
+    background-color: #f39c12;
+}
+
+.action-btn.delete {
+    background-color: #e74c3c;
+}
+
+.action-btn:hover {
+    opacity: 0.85;
+}
+
+/* Reset and Flex Layout */
+/* html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+/* main {
+    flex: 1;
+} */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}

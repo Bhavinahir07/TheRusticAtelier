@@ -1,0 +1,175 @@
+/* ===============================
+   LOGIN PAGE STYLING (login.css)
+   Matches loginSignup.css theme
+   =============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+.site-name {
+    /* font-family: 'Great Vibes', cursive; */
+    /* font-weight: bold; */
+    font-family: 'Allura', cursive;
+    /* font-family: 'Alex Brush', curs ive; */
+    /* font-family: 'Italianno', cursive; */
+    font-size: 3rem;
+    /* make it stand out */
+    font-weight: normal;
+    /* these fonts usually look best not bold */
+    letter-spacing: 1px;
+    /* optional: adds spacing */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff5e62;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #ff5e62;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Mobile devices (max 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        padding: 18px;
+        border-radius: 12px;
+        position: relative;
+        /* top: auto; */
+        top: 80px;
+        left: auto;
+        transform: none;
+        margin-top: 50px;
+        box-shadow: none;
+    }
+
+    .site-name {
+        /* margin: 0; */
+        font-family: 'Allura', cursive;
+        font-size: 2rem;
+    }
+
+    /* h1 {
+        font-size: 20px;
+    } */
+
+    input,
+    button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+/* ✅ Tablet devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 20px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 85%;
+        max-width: 450px;
+        padding: 22px;
+        border-radius: 14px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 60px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input,
+    button {
+        padding: 11px;
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

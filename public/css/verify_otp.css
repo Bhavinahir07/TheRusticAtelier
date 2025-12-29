@@ -1,0 +1,72 @@
+body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #fff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .otp-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .otp-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .otp-inputs input {
+            width: 40px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .otp-inputs input:focus {
+            outline: none;
+            /* border-color: #007BFF; */
+            border-color: black;
+            /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); */
+            box-shadow: 0 0 5px rgba(10, 10, 10, 0.3);
+        }
+
+        button {
+            /* background: #007BFF; */
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+
+        }
+
+        button:hover {
+            /* background: #0056b3; */
+            background-color: #181818;
+            transform: scale(1.06);
+        }
+
+        .message {
+            color: red;
+            margin-top: 10px;
+        }

@@ -1,0 +1,22 @@
+.site-name {
+    font-family: 'Allura', 'Italianno', cursive;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust header <h1> margin */
+    .site-name {
+        margin: 0;
+        /* Remove negative margins for better centering */
+        font-size: 2rem;
+        /* Optional: adjust font size for better mobile view */
+    }
+}
+
+@media (max-width: 480px) {
+    .site-name {
+        font-size: 2rem;
+    }
+}
